@@ -1,0 +1,19 @@
+import turtle
+
+turtle.setup(800, 600)  # size of turtle window
+t = turtle.Turtle()
+
+
+tp = turtle.Pen()
+tp.speed(0)
+turtle.bgcolor("black")  # backround
+colors = ["red", "purple", "blue", "green", "orange", "yellow"]  # circle colors
+
+for i in range(1, 300):  # how many circles
+    tp.pencolor(colors[i % 6])  # cycle through colors
+    t.width(i / 50 + 50)  # witdh of lines ( not currently working)
+    tp.circle(i * 1)  # size of circles?
+    tp.left(25)  # rotation of circles
+
+
+turtle.done()
